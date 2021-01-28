@@ -1,254 +1,385 @@
-@import 'function.scss';
+@import "function.scss";
 // *{
 //     border: 1px solid red;
 // }
-.notification{
-    background-color: $notification-bg;
-    width: 100%;
-    height: 40px;
-    color: $light-text;
-    font-weight: 600;
-    .title{
-        background-color: $primary-color;
-        padding: 8px;
-    }
-}
-.aboutus-section{
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+.notification {
+  border: 1px solid $notification-border;
+  color: $notification-color !important;
+  width: 100%;
+  height: 40px;
+  color: $white-text;
+  font-weight: 600;
+  .notification-title {
     background-color: $primary-color;
-    .box{
-        background-color: $secondary-color;
-        box-shadow: 0px 0px 10px 2px $paragraph2;
-        width: 70%;   
-        .title{
-            font-weight: 700;
-            border-bottom:2px solid $primary-color;
-            color: $primary-color;
-        }
-        .img-box{
-            transition: all 2s;
-            height:300px;   
-            background-image: url('../img/college_building.jpg');
-            background-repeat: no-repeat;
-            background-size: 120%;
-            box-shadow: 0px 0px 6px 0px $paragraph;
-        }
-        .desc{
-            text-align: justify;
-            color: $paragraph2;
-            font-weight: 700;
-        }        
-    }
+    padding: 8px;
+    color: $white-text;
+  }
 }
 
-.chairman-section{
-    .chairman-box{
-        width: 90%;
-        background-color: $secondary-color;
-        .chair-img{
-            border: 10px solid $secondary-color;
-            background-image: url('../img/chairman.jpg');
-            background-repeat: no-repeat;
-            height: 500px;
-            background-size: cover;
-            background-position: -100px;
-            position: relative;
-            overflow: hidden;
-            .overlay1{
-                transition: all 1000ms ease-out;
-                position: absolute;
-                width: 200px;
-                height: 200px;
-                background-color: $primary-color;
-                bottom: -27px;
-                left: -30px;
-                border-radius: 50%;
-                transform: rotate(-20deg);
-                opacity: 0.7;
-            }
-        }
-        .chair-desc{
-            text-align: justify;
-            color: $paragraph2;
-            position: relative;
-            overflow: hidden;
-            .overlay2{
-                transition: all 1s ease-out;
-                position: absolute;
-                width: 350px;
-                height: 350px;
-                background-color: $primary-color;
-                top: -70px;
-                right: -70px;
-                border-radius: 50%;
-                transform: rotate(-20deg);
-                opacity: 0.25;
-            }
-            .title{
-                font-weight: bolder;
-                color: $primary-color;
-                border-bottom: 2px solid $primary-color;
-            }
-            .sub-title{
-                font-size: 0.9em;
-                color: $paragraph;
-                font-weight: bold;
-            }
-            .chair-msg{
-                font-size: 1em;
-                color: $paragraph2;
-                font-weight: bolder;
-            }
-        }
+.aboutus-section {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  .box {
+    background-color: $primary-color;
+    box-shadow: 0px 0px 10px 2px $paragraph;
+    width: 70%;
+    .title {
+      font-weight: 700;
+      border-bottom: 2px solid $white-text;
+      color: $white-text;
     }
+    .img-box {
+      transition: all 2s;
+      height: 300px;
+      background-image: url("../img/college_building.jpg");
+      background-repeat: no-repeat;
+      background-size: 120%;
+      box-shadow: 0px 0px 10px 2px $paragraph2;
+    }
+    .desc {
+      text-align: justify;
+      color: $paragraph2;
+      font-weight: 500;
+    }
+  }
 }
 
-.college-life-section{
-    .life-box{
+.chairman-section {
+  .chairman-box {
+    width: 70%;
+    background-color: $primary-color;
+    box-shadow: 0px 0px 10px 2px $paragraph;
+
+    .chair-img {
+      border: 20px solid $primary-color;
+      background-image: url("../img/chairman.jpg");
+      background-repeat: no-repeat;
+      height: 400px;
+      background-size: cover;
+      background-position: -100px;
+      position: relative;
+      overflow: hidden;
+      .overlay1 {
+        transition: all 1000ms ease-out;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: $secondary-color;
+        bottom: -27px;
+        left: -30px;
+        border-radius: 50%;
+        transform: rotate(-20deg);
+        opacity: 0.7;
+      }
+    }
+    .chair-desc {
+      text-align: justify;
+      color: $paragraph2;
+      position: relative;
+      overflow: hidden;
+      //   .overlay2 {
+      //     transition: all 1s ease-out;
+      //     position: absolute;
+      //     width: 350px;
+      //     height: 350px;
+      //     background-color: $secondary-color;
+      //     top: -70px;
+      //     right: -70px;
+      //     border-radius: 50%;
+      //     transform: rotate(-20deg);
+      //     opacity: 0.25;
+      //   }
+      .title {
+        font-weight: bolder;
+        color: $white-text;
+        border-bottom: 2px solid $white-text;
+      }
+      .sub-title {
+        font-size: 0.9em;
+        color: $paragraph2;
+        font-weight: 100;
+      }
+      .chair-msg {
+        font-size: 1em;
+        color: $paragraph2;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.values-section {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  .value-backdrop {
+    position: absolute;
+    // top: -100px;
+    background-repeat: no-repeat;
+    background-position: -0px;
+    background-size: cover;
+    background-blend-mode: lighten;
+    opacity: 5;
+    height: 7000px;
+    width: 100%;
+    // z-index: 99;
+  }
+  .value-box {
+    .card {
+      transition: background-color 700ms;
+      box-shadow: 0px 0px 10px 0px $drop-shadow;
+      border-top: 10px solid $primary-color !important;
+      border: none;
+      .card-header {
+        background-color: transparent;
+        border-bottom: none;
+        .value-icon::before {
+          color: $primary-color;
+          background-color: $white-text;
+          padding: 10%;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 1px $drop-shadow;
+        }
+        .title-section {
+          .title {
+            font-weight: 600;
+          }
+          .sub-title {
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $light-text;
+          }
+        }
+      }
+      .card-body {
+        // background-image: url("../img/wave.svg");
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        .desc {
+          width: 75%;
+          text-align: justify;
+          color: black;
+          font-weight: 700;
+        }
+      }
+      .card-body::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/wave.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
-        .life-item{
-            height: 300px;
-            cursor: pointer;
-            background-repeat: no-repeat;
-            background-size: cover;
-            object-fit: fill;
-            position: relative;
-            overflow: hidden;
-            .overlay-box-top{
-                .item-overlay-top{
-                    transition: all 700ms;
-                    position: absolute;
-                    background-color: $primary-color;
-                    right: -300px;
-                    top: 0px;
-                    z-index: 99;
-                    width: 75%;
-                    height: 4%;
-                    border-top-left-radius: 70px;
-                    border-bottom-left-radius: 70px;
-                }
-                .item-overlay-top:nth-child(2){
-                    right: -300px;
-                    top: 15px;
-                }
-            }
-            .overlay-box-bottom{
-                .item-overlay-bottom{
-                    transition: all 700ms;
-                    position: absolute;
-                    background-color: $primary-color;
-                    left: -300px;
-                    bottom: 0;
-                    z-index: 99;
-                    width: 75%;
-                    height: 4%;
-                    border-top-right-radius: 70px;
-                    border-bottom-right-radius: 70px;
-                }
-                .item-overlay-bottom:nth-child(2){
-                    left: -300px;
-                    bottom: 15px;
-                }
-            }
-        }
-        .life-item:nth-child(1){
-            background-image: url('../img/gym.jpg');
-        }
-        .life-item:nth-child(2){
-            background-image: url('../img/sports1.jpg');
-        }
-
-        .life-item:nth-child(3){
-            background-image: url('../img/library.jpg');
-        }
-        .life-item:nth-child(3):hover{
-            background-image:linear-gradient(to bottom,rgba(255,255,255,0.15),rgba(0,0,0,0.45)),url('../img/library.jpg');
-        }
-        .life-item:nth-child(1):hover{
-            background-image:linear-gradient(to bottom,rgba(255,255,255,0.15),rgba(0,0,0,0.45)),url('../img/gym.jpg');
-        }
-        .life-item:hover{
-            background-image:linear-gradient(to bottom,rgba(255,212,100,0.15),rgba(0,0,0,0.45)),url('../img/sports1.jpg');
-            .overlay-box-top{
-                .item-overlay-top:nth-child(1){
-                    right: -120px;
-                }
-                .item-overlay-top:nth-child(2){
-                    right: -140px;
-                }
-            }
-            .overlay-box-bottom{
-                .item-overlay-bottom:nth-child(1){
-                    left: -120px;
-                }
-                .item-overlay-bottom:nth-child(2){
-                    left: -140px;
-                }
-            }
-        }
+        height: 200px;
+        bottom: 0;
+        left: 0;
+        opacity: 0.2;
+        background-position: -10px;
+      }
     }
+  }
+  .value-box:nth-child(1) {
+    .card-body::before {
+      background-size: cover;
+      background-position: -150px;
+    }
+  }
+  .value-box:nth-child(2) {
+    .card-body::before {
+      background-size: cover;
+      background-position: -10px;
+    }
+  }
+  .value-box:nth-child(3) {
+    .card-body::before {
+      background-size: cover;
+      background-position: -400px;
+    }
+  }
 }
 
-.partner-section{
-    background-color: $secondary-color;
-    padding: 5% 0%;
-    .section-title{
-        color: $primary-color;
-        border-bottom: 2px solid $primary-color;
-        font-weight: 500;       
+.college-life-section {
+  .life-box {
+    width: 100%;
+    .life-item {
+      height: 300px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: fill;
+      position: relative;
+      overflow: hidden;
+      .overlay-box-top {
+        .item-overlay-top {
+          transition: all 700ms;
+          position: absolute;
+          background-color: $primary-color;
+          right: -300px;
+          top: 0px;
+          z-index: 99;
+          width: 75%;
+          height: 4%;
+          border-top-left-radius: 70px;
+          border-bottom-left-radius: 70px;
+        }
+        .item-overlay-top:nth-child(2) {
+          right: -300px;
+          top: 15px;
+        }
+      }
+      .overlay-box-bottom {
+        .item-overlay-bottom {
+          transition: all 700ms;
+          position: absolute;
+          background-color: $primary-color;
+          left: -300px;
+          bottom: 0;
+          z-index: 99;
+          width: 75%;
+          height: 4%;
+          border-top-right-radius: 70px;
+          border-bottom-right-radius: 70px;
+        }
+        .item-overlay-bottom:nth-child(2) {
+          left: -300px;
+          bottom: 15px;
+        }
+      }
     }
-    .owl-carousel{
-        margin: 0 auto;
-        width: 900px;
-        .owl-stage-outer{
-            padding: 10% 0%;
-        }
-        .owl-item{
-            .item{
-                .company-img{
-                    img{       
-                        background-color: #fff;            
-                        width: 100px;
-                        height: 100px;
-                        padding: 2%;
-                    }
-                }
-                .c-title{
-                    transition: all 2s ease-in-out;
-                    position: absolute;
-                    bottom: -50px;
-                    color: $primary-color;
-                    opacity: 0;
-                    font-weight: 500;
-                }
-            }     
-        }
-        .owl-item.active{
-            .c-title{
-                opacity: 0.35;
-                font-weight: 100;
-            }
-        }
-        .owl-item.center{
-            .c-title{
-                opacity: 0.35;
-                font-weight: 100;
-            }
-        }
-        .owl-item.active.center {
-            img{
-                width: 120px;
-                height: 120px;
-                background-color: #fff;
-                border: 2px solid $primary-color;
-                box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
-            }
-            .c-title{
-                opacity: 1;
-                font-weight: 500;
-            }
-        }
+    .life-item:nth-child(1) {
+      background-image: url("../img/gym.jpg");
     }
+    .life-item:nth-child(2) {
+      background-image: url("../img/sports1.jpg");
+    }
+
+    .life-item:nth-child(3) {
+      background-image: url("../img/library.jpg");
+    }
+    .life-item:nth-child(3):hover {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.15),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("../img/library.jpg");
+    }
+    .life-item:nth-child(1):hover {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.15),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("../img/gym.jpg");
+    }
+    .life-item:hover {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(255, 212, 100, 0.15),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("../img/sports1.jpg");
+      .overlay-box-top {
+        .item-overlay-top:nth-child(1) {
+          right: -120px;
+        }
+        .item-overlay-top:nth-child(2) {
+          right: -140px;
+        }
+      }
+      .overlay-box-bottom {
+        .item-overlay-bottom:nth-child(1) {
+          left: -120px;
+        }
+        .item-overlay-bottom:nth-child(2) {
+          left: -140px;
+        }
+      }
+    }
+  }
+}
+
+.activity-section {
+  background-color: $primary-color;
+  padding: 2% 0%;
+  .section-title {
+    color: $white-text;
+    border-bottom: 2px solid $white-text;
+    font-weight: 500;
+  }
+  .owl-carousel {
+    margin: 0 auto;
+    width: 50%;
+    .owl-stage-outer {
+      padding: 5% 0%;
+    }
+    .owl-item {
+      .item {
+        .company-img {
+          img {
+            background-color: #fff;
+            width: 100px;
+            height: 100px;
+            padding: 2%;
+          }
+        }
+        .c-title {
+          transition: all 2s ease-in-out;
+          position: absolute;
+          bottom: -50px;
+          color: $white-text;
+          opacity: 0;
+          font-weight: 500;
+        }
+      }
+    }
+    .owl-item.active {
+      .c-title {
+        opacity: 0.35;
+        font-weight: 100;
+      }
+    }
+    .owl-item.center {
+      .c-title {
+        opacity: 0.35;
+        font-weight: 100;
+      }
+    }
+    .owl-item.active.center {
+      img {
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+        border: 2px solid $white-text;
+        box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+      }
+      .c-title {
+        opacity: 1;
+        font-weight: 500;
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .aboutus-section {
+    .box {
+      width: 100%;
+      .img-box {
+        height: 280px;
+      }
+    }
+  }
+  .chairman-section {
+    .chairman-box {
+      width: 100%;
+    }
+  }
+  .activity-section {
+    .owl-carousel {
+      width: 100%;
+      .owl-stage-outer {
+        padding: 10% 0%;
+      }
+    }
+  }
 }

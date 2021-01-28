@@ -1,19 +1,21 @@
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
 .notification {
-  background-color: #919191;
+  border: 1px solid #000;
+  color: #000 !important;
   width: 100%;
   height: 40px;
   color: #fff;
   font-weight: 600;
 }
 
-.notification .title {
-  background-color: #000000;
+.notification .notification-title {
+  background-color: #980000;
   padding: 8px;
+  color: #fff;
 }
 
 .aboutus-section {
@@ -24,20 +26,19 @@
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  background-color: #000000;
 }
 
 .aboutus-section .box {
-  background-color: #5E5E5E;
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.7);
-          box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.7);
+  background-color: #980000;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
   width: 70%;
 }
 
 .aboutus-section .box .title {
   font-weight: 700;
-  border-bottom: 2px solid #000000;
-  color: #000000;
+  border-bottom: 2px solid #fff;
+  color: #fff;
 }
 
 .aboutus-section .box .img-box {
@@ -47,26 +48,28 @@
   background-image: url("../img/college_building.jpg");
   background-repeat: no-repeat;
   background-size: 120%;
-  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.9);
+          box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.9);
 }
 
 .aboutus-section .box .desc {
   text-align: justify;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
 }
 
 .chairman-section .chairman-box {
-  width: 90%;
-  background-color: #5E5E5E;
+  width: 70%;
+  background-color: #980000;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
 }
 
 .chairman-section .chairman-box .chair-img {
-  border: 10px solid #5E5E5E;
+  border: 20px solid #980000;
   background-image: url("../img/chairman.jpg");
   background-repeat: no-repeat;
-  height: 500px;
+  height: 400px;
   background-size: cover;
   background-position: -100px;
   position: relative;
@@ -79,7 +82,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background-color: #000000;
+  background-color: #c40801;
   bottom: -27px;
   left: -30px;
   border-radius: 50%;
@@ -90,42 +93,116 @@
 
 .chairman-section .chairman-box .chair-desc {
   text-align: justify;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   position: relative;
   overflow: hidden;
 }
 
-.chairman-section .chairman-box .chair-desc .overlay2 {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  background-color: #000000;
-  top: -70px;
-  right: -70px;
-  border-radius: 50%;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-  opacity: 0.25;
-}
-
 .chairman-section .chairman-box .chair-desc .title {
   font-weight: bolder;
-  color: #000000;
-  border-bottom: 2px solid #000000;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .chairman-section .chairman-box .chair-desc .sub-title {
   font-size: 0.9em;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 100;
 }
 
 .chairman-section .chairman-box .chair-desc .chair-msg {
   font-size: 1em;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: bolder;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.values-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.values-section .value-backdrop {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: -0px;
+  background-size: cover;
+  background-blend-mode: lighten;
+  opacity: 5;
+  height: 7000px;
+  width: 100%;
+}
+
+.values-section .value-box .card {
+  -webkit-transition: background-color 700ms;
+  transition: background-color 700ms;
+  -webkit-box-shadow: 0px 0px 10px 0px #c6c6c6;
+          box-shadow: 0px 0px 10px 0px #c6c6c6;
+  border-top: 10px solid #980000 !important;
+  border: none;
+}
+
+.values-section .value-box .card .card-header {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.values-section .value-box .card .card-header .value-icon::before {
+  color: #980000;
+  background-color: #fff;
+  padding: 10%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 1px #c6c6c6;
+          box-shadow: 0px 0px 10px 1px #c6c6c6;
+}
+
+.values-section .value-box .card .card-header .title-section .title {
+  font-weight: 600;
+}
+
+.values-section .value-box .card .card-header .title-section .sub-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #867e70;
+}
+
+.values-section .value-box .card .card-body .desc {
+  width: 75%;
+  text-align: justify;
+  color: black;
+  font-weight: 700;
+}
+
+.values-section .value-box .card .card-body::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  background-position: -10px;
+}
+
+.values-section .value-box:nth-child(1) .card-body::before {
+  background-size: cover;
+  background-position: -150px;
+}
+
+.values-section .value-box:nth-child(2) .card-body::before {
+  background-size: cover;
+  background-position: -10px;
+}
+
+.values-section .value-box:nth-child(3) .card-body::before {
+  background-size: cover;
+  background-position: -400px;
 }
 
 .college-life-section .life-box {
@@ -147,7 +224,7 @@
   -webkit-transition: all 700ms;
   transition: all 700ms;
   position: absolute;
-  background-color: #000000;
+  background-color: #980000;
   right: -300px;
   top: 0px;
   z-index: 99;
@@ -166,7 +243,7 @@
   -webkit-transition: all 700ms;
   transition: all 700ms;
   position: absolute;
-  background-color: #000000;
+  background-color: #980000;
   left: -300px;
   bottom: 0;
   z-index: 99;
@@ -224,64 +301,82 @@
   left: -140px;
 }
 
-.partner-section {
-  background-color: #5E5E5E;
-  padding: 5% 0%;
+.activity-section {
+  background-color: #980000;
+  padding: 2% 0%;
 }
 
-.partner-section .section-title {
-  color: #000000;
-  border-bottom: 2px solid #000000;
+.activity-section .section-title {
+  color: #fff;
+  border-bottom: 2px solid #fff;
   font-weight: 500;
 }
 
-.partner-section .owl-carousel {
+.activity-section .owl-carousel {
   margin: 0 auto;
-  width: 900px;
+  width: 50%;
 }
 
-.partner-section .owl-carousel .owl-stage-outer {
-  padding: 10% 0%;
+.activity-section .owl-carousel .owl-stage-outer {
+  padding: 5% 0%;
 }
 
-.partner-section .owl-carousel .owl-item .item .company-img img {
+.activity-section .owl-carousel .owl-item .item .company-img img {
   background-color: #fff;
   width: 100px;
   height: 100px;
   padding: 2%;
 }
 
-.partner-section .owl-carousel .owl-item .item .c-title {
+.activity-section .owl-carousel .owl-item .item .c-title {
   -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
   position: absolute;
   bottom: -50px;
-  color: #000000;
+  color: #fff;
   opacity: 0;
   font-weight: 500;
 }
 
-.partner-section .owl-carousel .owl-item.active .c-title {
+.activity-section .owl-carousel .owl-item.active .c-title {
   opacity: 0.35;
   font-weight: 100;
 }
 
-.partner-section .owl-carousel .owl-item.center .c-title {
+.activity-section .owl-carousel .owl-item.center .c-title {
   opacity: 0.35;
   font-weight: 100;
 }
 
-.partner-section .owl-carousel .owl-item.active.center img {
+.activity-section .owl-carousel .owl-item.active.center img {
   width: 120px;
   height: 120px;
   background-color: #fff;
-  border: 2px solid #000000;
+  border: 2px solid #fff;
   -webkit-box-shadow: 0px 0px 10px 0px white;
           box-shadow: 0px 0px 10px 0px white;
 }
 
-.partner-section .owl-carousel .owl-item.active.center .c-title {
+.activity-section .owl-carousel .owl-item.active.center .c-title {
   opacity: 1;
   font-weight: 500;
+}
+
+@media screen and (max-width: 720px) {
+  .aboutus-section .box {
+    width: 100%;
+  }
+  .aboutus-section .box .img-box {
+    height: 280px;
+  }
+  .chairman-section .chairman-box {
+    width: 100%;
+  }
+  .activity-section .owl-carousel {
+    width: 100%;
+  }
+  .activity-section .owl-carousel .owl-stage-outer {
+    padding: 10% 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
